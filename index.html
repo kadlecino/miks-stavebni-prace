@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Miroslav Mikš – stavební práce a rekonstrukce | Olomouc a okolí</title>
+<meta name="description" content="Stavební práce a rekonstrukce od roku 1995. Dolany u Olomouce, Olomouc a okolí. Nezávazná kalkulace zdarma. Tel. 608 701 054.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+ --navy:#0f2238;--blue:#0a5fa8;--blue-d:#084b86;--blue-l:#e8f2fb;--blue-ll:#f4f9fd;
+ --sun:#ffc425;--sun-d:#f0b000;--muted:#4d5f73;--line:#d5e2ef;--white:#fff;
+ --f:'Figtree',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:var(--f);color:var(--navy);background:#fff;line-height:1.6;font-size:17px;overflow-x:hidden;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-weight:800;line-height:1.15;margin:0;letter-spacing:-.015em}
+h2{font-size:clamp(28px,6.5vw,40px);margin-bottom:12px}
+.kick{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:var(--blue-l);padding:5px 12px;border-radius:99px;margin:0 0 14px}
+.sub{color:var(--muted);max-width:640px;margin:0 0 32px}
+section{padding:56px 0}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;font-family:var(--f);font-weight:700;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;border-radius:10px;line-height:1.2}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-s{background:var(--sun);color:var(--navy);box-shadow:0 2px 0 var(--sun-d)}.btn-s:hover{background:#ffd04f}
+.btn-b{background:var(--blue);color:#fff}.btn-b:hover{background:var(--blue-d)}
+.btn-o{border-color:var(--blue);color:var(--blue);background:#fff}.btn-o:hover{background:var(--blue-l)}
+
+/* top bar + header */
+.topbar{background:var(--navy);color:#cfdcea;font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px}
+.topbar span.t2{display:none}
+.topbar .wrap>span:first-child{display:none}
+.topbar .wrap{justify-content:center;text-align:center}
+.logo>span{white-space:nowrap}.logo small{display:none}
+header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:800;font-size:20px;line-height:1.1;letter-spacing:-.01em}
+.logo svg{width:34px;height:34px;flex:none}
+.logo small{display:block;font-weight:600;font-size:12px;color:var(--muted);letter-spacing:0}
+nav{display:none}
+nav a{font-weight:600;font-size:16px;text-decoration:none;color:var(--navy);margin-left:24px}
+nav a:hover{color:var(--blue)}
+.hphone{display:flex;align-items:center;gap:10px;background:var(--sun);color:var(--navy);text-decoration:none;padding:7px 14px;border-radius:10px;box-shadow:0 2px 0 var(--sun-d);line-height:1.1;white-space:nowrap}
+.hphone svg{width:20px;height:20px}
+.hphone small{display:none;font-size:12px;font-weight:600}
+.hphone b{font-size:19px;font-weight:800;letter-spacing:.01em}
+
+/* hero */
+.hero{background:var(--blue-l);padding:36px 0 44px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;gap:30px}
+.hero h1{font-size:clamp(32px,8.4vw,52px);margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .lead{font-size:18px;color:var(--muted);max-width:540px;margin:0 0 24px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.ctas .btn{flex:1 1 220px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.checks li{display:flex;gap:12px;align-items:center;font-weight:600}
+.checks svg{width:24px;height:24px;flex:none;fill:var(--blue)}
+.slot{background:#fff;border:2px dashed #9dbbd8;border-radius:16px;padding:10px}
+.slot .in{background:var(--blue-ll);border-radius:10px;aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;color:var(--blue);padding:20px}
+.slot svg{width:54px;height:54px}
+.slot strong{font-size:20px;color:var(--navy)}
+.slot span{font-size:15px;color:var(--muted)}
+
+/* sluzby */
+.services{display:grid;gap:18px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px 24px;border-top:5px solid var(--blue);display:flex;flex-direction:column;gap:10px;box-shadow:0 2px 10px rgba(15,34,56,.05)}
+.ico{width:60px;height:60px;border-radius:14px;background:var(--blue-l);display:flex;align-items:center;justify-content:center;margin-bottom:4px}
+.ico svg{width:36px;height:36px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:26px}
+.svc p{margin:0;color:var(--muted)}
+.svc ul{list-style:none;margin:4px 0 12px;padding:0;display:grid;gap:8px}
+.svc li{padding-left:28px;position:relative}
+.svc li:before{content:"";position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:var(--blue-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230a5fa8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.svc .btn{margin-top:auto;align-self:flex-start}
+
+/* ukazky */
+.ukazky{background:var(--blue-ll);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.slots{display:grid;gap:14px}
+.slots .slot svg{width:44px;height:44px}
+.slots .slot strong{font-size:18px}
+
+/* postup */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.step{background:var(--blue-ll);border:1px solid var(--line);border-radius:14px;padding:18px 18px 18px 78px;position:relative}
+.step:before{content:counter(s);counter-increment:s;position:absolute;left:18px;top:18px;width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center}
+.step h4{font-size:19px;margin-bottom:2px}
+.step p{margin:0;color:var(--muted);font-size:16px}
+
+/* recenze */
+.rev{background:var(--blue-ll);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin:20px 0 26px}
+.score .num{font-weight:800;font-size:76px;line-height:.9;color:var(--navy)}
+.stars{display:inline-flex;gap:3px}
+.stars svg{width:24px;height:24px;fill:#fbbc04}
+.score .meta{display:grid;gap:6px}
+.score .meta>span{font-size:16px;font-weight:600}
+.gword{display:inline-flex;align-items:center;gap:9px;font-family:'Product Sans','Google Sans',Arial,sans-serif;font-size:22px;font-weight:500;letter-spacing:-.2px;line-height:1}
+.gword svg{width:26px;height:26px}
+.gword .b{color:#4285f4}.gword .r{color:#ea4335}.gword .y{color:#fbbc05}.gword .g{color:#34a853}
+.rcards{display:grid;gap:12px;margin-bottom:26px;max-width:420px}
+.rc{background:#fff;border:1px solid var(--line);padding:18px 18px 20px;border-radius:14px;position:relative}
+.rc .top{display:flex;align-items:center;gap:12px;margin-bottom:10px;padding-right:26px}
+.av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;flex:none}
+.rc .who{font-weight:700;line-height:1.25;font-size:16px}
+.rc .who small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.rc .stars svg{width:18px;height:18px}
+.rc p{margin:10px 0 0;font-size:16px}
+.rc .gmini{position:absolute;right:14px;top:14px;width:20px;height:20px}
+
+/* faq */
+details{border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:#fff}
+summary{list-style:none;cursor:pointer;padding:16px 52px 16px 18px;font-weight:700;font-size:18px;position:relative;line-height:1.3}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--blue-l);color:var(--blue);font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center}
+details[open] summary:after{content:"–"}
+details p{margin:0;padding:0 18px 18px;color:var(--muted);max-width:660px}
+
+/* poptavka */
+.ask{background:var(--blue);color:#fff}
+.ask h2{color:#fff}
+.ask .kick{background:rgba(255,255,255,.15);color:#fff}
+.ask .sub{color:#d7e8f8;margin-bottom:22px}
+.form-wrap{display:grid;gap:30px}
+.contact-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.contact-list li{background:rgba(255,255,255,.1);border-radius:12px;padding:12px 16px;font-size:14px;color:#d7e8f8;display:grid;gap:0}
+.contact-list a,.contact-list .plain{font-weight:800;font-size:22px;color:#fff;text-decoration:none;word-break:break-word}
+.contact-list a:hover{text-decoration:underline}
+form{background:#fff;color:var(--navy);padding:24px 20px;display:grid;gap:14px;border-radius:16px;border-top:6px solid var(--sun)}
+label{font-size:14px;font-weight:700;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:12px 13px;border:1px solid #b7c9db;border-radius:8px;background:#fff;width:100%;color:var(--navy)}
+textarea{min-height:110px;resize:vertical}
+.row2{display:grid;gap:14px}
+form .btn{width:100%}
+
+footer{background:var(--navy);color:#a9bacb;padding:30px 0 100px;font-size:14px}
+footer .wrap{display:grid;gap:14px}
+footer b{color:#fff;font-size:18px}
+footer a{text-decoration:none;color:#fff}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;gap:8px;padding:10px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(15,34,56,.12)}
+.callbar a{flex:1}
+
+@media (min-width:640px){
+ .topbar span.t2{display:inline}
+ .topbar .wrap>span:first-child{display:inline}
+ .topbar .wrap{justify-content:space-between;text-align:left}
+ .logo small{display:block}
+ .hphone small{display:block}
+ .services{grid-template-columns:1fr 1fr}
+ .services .svc:last-child{grid-column:1/-1;width:calc(50% - 9px);justify-self:center}
+ .slots{grid-template-columns:repeat(3,1fr)}
+ .row2{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+}
+@media (min-width:900px){
+ body{font-size:18px}
+ nav{display:block}
+ .callbar{display:none}
+ footer{padding-bottom:30px}
+ footer .wrap{grid-template-columns:1fr auto;align-items:end}
+ section{padding:84px 0}
+ .hero{padding:64px 0 72px}
+ .hero .wrap{grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+ .ctas .btn{flex:0 0 auto}
+ .services{grid-template-columns:repeat(6,1fr);gap:24px}
+ .services .svc,.services .svc:last-child{grid-column:span 2;width:auto;justify-self:stretch}
+ .services .svc:nth-child(4){grid-column:2/4}
+ .services .svc:nth-child(5){grid-column:4/6}
+ .steps{grid-template-columns:repeat(4,1fr);gap:20px}
+ .step{padding:84px 18px 20px}
+ .step:before{left:18px;top:20px}
+ .form-wrap{grid-template-columns:1fr 1.25fr;gap:60px;align-items:start}
+ form{padding:32px}
+}
+@media (max-width:420px){.logo{font-size:17px;gap:8px}.logo svg{width:30px;height:30px}.hphone{padding:8px 11px;gap:7px}.hphone b{font-size:17px}header .wrap{gap:8px}}
+.upload{display:flex!important;flex-direction:row!important;align-items:center;gap:10px;padding:14px 16px;border:1.5px dashed #9db7d3;border-radius:10px;background:#f4f8fc;color:#0a5fa8;font-weight:600;cursor:pointer}
+.upload:hover{background:#eaf2fa}
+.upload input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.upload:focus-within{outline:2px solid #0a5fa8;outline-offset:2px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="st" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+ <symbol id="g" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol>
+ <symbol id="ck" viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm-1.6 15.6l-4.2-4.2 1.5-1.5 2.7 2.7 6-6 1.5 1.5z"/></symbol>
+ <symbol id="ph" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+</svg>
+
+<div class="topbar"><div class="wrap"><span>Stavební práce · Rekonstrukce</span><span><span class="t2">Působíme: </span>Dolany, Olomouc a okolí</span></div></div>
+<header>
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Miroslav Mikš – na začátek">
+   <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0a5fa8"/><path d="M20 7.5L33 19h-4v13H11V19H7z" fill="#fff"/><rect x="17" y="22" width="6" height="10" fill="#0a5fa8"/></svg>
+   <span>Miroslav Mikš<small>Stavební práce a rekonstrukce</small></span>
+  </a>
+  <nav><a href="#sluzby">Služby</a><a href="#ukazky">Ukázky</a><a href="#postup">Jak to probíhá</a><a href="#recenze">Recenze</a><a href="#poptavka">Poptávka</a></nav>
+  <a class="hphone" href="tel:+420608701054"><svg><use href="#ph"/></svg><span><small>Zavolejte:</small><b>608 701 054</b></span></a>
+ </div>
+</header>
+
+<main>
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <p class="kick">Olomouc a okolí</p>
+   <h1>Stavební práce a rekonstrukce <em>– Olomouc a okolí</em></h1>
+   <p class="lead">Rekonstrukce bytů a domů, zednické práce, podlahy, sádrokarton i voda, topení a plyn. Dolany, Olomouc a okolí.</p>
+   <div class="ctas">
+    <a class="btn btn-s" href="tel:+420608701054"><svg><use href="#ph"/></svg>Zavolat 608 701 054</a>
+    <a class="btn btn-o" href="#poptavka">Poslat poptávku s fotkou</a>
+   </div>
+   <ul class="checks">
+    <li><svg aria-hidden="true"><use href="#ck"/></svg>V oboru od roku 1995</li>
+    <li><svg aria-hidden="true"><use href="#ck"/></svg>5,0 ★ hodnocení na Googlu</li>
+    <li><svg aria-hidden="true"><use href="#ck"/></svg>Nezávazná kalkulace zdarma</li>
+   </ul>
+  </div>
+  <div class="slot" role="img" aria-label="Místo pro vaši fotku">
+   <div class="in">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.6"/></svg>
+    <strong>Místo pro vaši fotku</strong>
+    <span>např. vy při práci nebo hotová rekonstrukce</span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<section id="sluzby">
+ <div class="wrap">
+  <p class="kick">Co dělám</p>
+  <h2>Stavební práce a rekonstrukce</h2>
+  <p class="sub">Byty, rodinné domy i další prostory. Rád poradím a připravím nezávaznou kalkulaci.</p>
+  <div class="services">
+   <div class="svc">
+    <div class="ico"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 5L4 17h4v13h20V17h4z"/><path d="M15 30v-8h6v8"/></svg></div>
+    <h3>Rekonstrukce bytů a domů</h3>
+    <p>Od menších úprav po celkové rekonstrukce.</p>
+    <ul><li>rekonstrukce bytů</li><li>rekonstrukce rodinných domů</li><li>přípravné a dokončovací práce</li></ul>
+    <a class="btn btn-b" href="#poptavka" data-sluzba="Rekonstrukce bytů a domů">Poptat rekonstrukci</a>
+   </div>
+   <div class="svc">
+    <div class="ico"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="4" y="8" width="28" height="8" rx="1"/><rect x="4" y="20" width="28" height="8" rx="1"/><path d="M13 8v8M23 8v8M18 20v8"/></svg></div>
+    <h3>Zednické práce</h3>
+    <p>Stavební práce na zdivu a omítkách.</p>
+    <ul><li>zdění a příčky</li><li>omítky a opravy</li><li>úpravy a dokončovací práce</li></ul>
+    <a class="btn btn-b" href="#poptavka" data-sluzba="Zednické práce">Poptat zednické práce</a>
+   </div>
+   <div class="svc">
+    <div class="ico"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 26l8-12h20l-8 12z"/><path d="M8 20h20M16 26l4-12"/></svg></div>
+    <h3>Podlahy</h3>
+    <p>Podlahářské práce v bytech i domech.</p>
+    <ul><li>příprava podkladu</li><li>pokládka podlah</li><li>dokončení a úpravy</li></ul>
+    <a class="btn btn-b" href="#poptavka" data-sluzba="Podlahy">Poptat podlahy</a>
+   </div>
+   <div class="svc">
+    <div class="ico"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="5" y="6" width="26" height="24" rx="2"/><path d="M5 14h26M5 22h26M16 6v8M22 14v8M12 22v8"/></svg></div>
+    <h3>Sádrokarton</h3>
+    <p>Sádrokartonové konstrukce a úpravy.</p>
+    <ul><li>příčky a předsazené stěny</li><li>podhledy</li><li>úpravy interiéru</li></ul>
+    <a class="btn btn-b" href="#poptavka" data-sluzba="Sádrokarton">Poptat sádrokarton</a>
+   </div>
+   <div class="svc">
+    <div class="ico"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 12h14a4 4 0 0 1 4 4v14"/><path d="M6 8v8M24 30h-6M10 30h-6"/><path d="M28 6c2.5 3 4 5 4 7.5a4 4 0 0 1-8 0c0-2.5 1.5-4.5 4-7.5z"/></svg></div>
+    <h3>Voda – topení – plyn</h3>
+    <p>Instalační práce při rekonstrukcích.</p>
+    <ul><li>rozvody vody</li><li>topení</li><li>plynové rozvody</li></ul>
+    <a class="btn btn-b" href="#poptavka" data-sluzba="Voda – topení – plyn">Poptat instalace</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="ukazky" id="ukazky">
+ <div class="wrap">
+  <p class="kick">Ukázky práce</p>
+  <h2>Ukázky práce</h2>
+  <p class="sub">Zde budou fotky hotových realizací.</p>
+  <div class="slots">
+   <div class="slot" role="img" aria-label="Místo pro fotky vašich realizací"><div class="in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.6"/></svg><strong>Místo pro fotky vašich realizací</strong></div></div>
+   <div class="slot" role="img" aria-label="Místo pro fotky vašich realizací"><div class="in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.6"/></svg><strong>Místo pro fotky vašich realizací</strong></div></div>
+   <div class="slot" role="img" aria-label="Místo pro fotky vašich realizací"><div class="in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.6"/></svg><strong>Místo pro fotky vašich realizací</strong></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="postup">
+ <div class="wrap">
+  <p class="kick">Postup</p>
+  <h2>Jak to probíhá</h2>
+  <p class="sub">Nemusíte nic složitě popisovat. Stačí fotka.</p>
+  <ol class="steps">
+   <li class="step"><h4>Pošlete fotku</h4><p>Přes formulář níže, nebo rovnou zavolejte.</p></li>
+   <li class="step"><h4>Ozvu se</h4><p>Doptám se na detaily, případně se přijedu podívat.</p></li>
+   <li class="step"><h4>Kalkulace</h4><p>Dostanete nezávaznou cenu předem.</p></li>
+   <li class="step"><h4>Realizace</h4><p>Domluvíme termín a práci udělám pečlivě.</p></li>
+  </ol>
+ </div>
+</section>
+
+<section class="rev" id="recenze">
+ <div class="wrap">
+  <p class="kick">Hodnocení zákazníků</p>
+  <h2>Recenze na Googlu</h2>
+  <div class="score">
+   <div class="num">5,0</div>
+   <div class="meta">
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg aria-hidden="true"><use href="#st"/></svg><svg aria-hidden="true"><use href="#st"/></svg><svg aria-hidden="true"><use href="#st"/></svg><svg aria-hidden="true"><use href="#st"/></svg><svg aria-hidden="true"><use href="#st"/></svg></div>
+    <span class="gword" aria-label="Google"><svg aria-hidden="true"><use href="#g"/></svg><span><span class="b">G</span><span class="r">o</span><span class="y">o</span><span class="b">g</span><span class="g">l</span><span class="r">e</span></span></span>
+   </div>
+  </div>
+  <div class="rcards">
+   <article class="rc"><svg class="gmini" aria-hidden="true"><use href="#g"/></svg>
+    <div class="top"><div class="av" style="background:#5b6abf">M</div><div class="who">Michael Dojčár<small>Místní průvodce</small></div></div>
+    <div class="stars" role="img" aria-label="5 z 5 hvězdiček"><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg><svg><use href="#st"/></svg></div>
+   </article>
+  </div>
+  <a class="btn btn-o" href="https://maps.google.com/?cid=18357339573117068906" target="_blank" rel="noopener">Zobrazit na Googlu</a>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <p class="kick">Otázky</p>
+  <h2>Časté otázky</h2>
+  <div style="margin-top:24px">
+   <details><summary>Kolik to bude stát?</summary><p>Záleží na rozsahu. Pošlete fotku nebo zavolejte a připravím nezávaznou kalkulaci zdarma.</p></details>
+   <details><summary>Kde působíte?</summary><p>Dolany, Olomouc a okolí.</p></details>
+   <details><summary>Děláte i menší zakázky?</summary><p>Napište nebo zavolejte, domluvíme se.</p></details>
+  </div>
+ </div>
+</section>
+
+<section class="ask" id="poptavka">
+ <div class="wrap form-wrap">
+  <div>
+   <p class="kick">Kontakt</p>
+   <h2>Poptávka</h2>
+   <p class="sub">Napište, co potřebujete, a přiložte fotku. Ozvu se co nejdřív.</p>
+   <ul class="contact-list">
+    <li>Telefon <a href="tel:+420608701054">608 701 054</a></li>
+    <li>E-mail <a href="mailto:miroslavmiks@seznam.cz">miroslavmiks@seznam.cz</a></li>
+    <li>Adresa <span class="plain">Dolany 221, 783 16 Dolany u Olomouce</span></li>
+   </ul>
+  </div>
+  <form action="https://formsubmit.co/miroslavmiks@seznam.cz" method="POST" enctype="multipart/form-data">
+   <input type="hidden" name="_subject" value="Nová poptávka z webu">
+   <input type="hidden" name="_captcha" value="false">
+   <input type="hidden" name="_template" value="table">
+   <input type="text" name="_honey" style="display:none">
+   <div class="row2">
+    <label>Jméno<input name="jmeno" required autocomplete="name"></label>
+    <label>Telefon<input name="telefon" type="tel" required autocomplete="tel"></label>
+   </div>
+   <div class="row2">
+    <label>Obec<input name="obec" required></label>
+    <label>Co potřebujete<select name="sluzba" id="sluzba"><option>Rekonstrukce bytů a domů</option><option>Zednické práce</option><option>Podlahy</option><option>Sádrokarton</option><option>Voda – topení – plyn</option><option>Jiné</option></select></label>
+   </div>
+   <label>Popis<textarea name="popis" placeholder="Např. rekonstrukce koupelny, nové podlahy v bytě…"></textarea></label>
+   <label class="upload"><input type="file" name="foto" accept="image/*"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg><span class="up-t">Přidat fotku (nepovinné)</span></label>
+   <button class="btn btn-s" type="submit">Odeslat poptávku</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><b>Miroslav Mikš</b> – stavební práce a rekonstrukce<br>IČO 63681927 · Dolany 221, 783 16 Dolany u Olomouce</div>
+  <div><a href="tel:+420608701054">608 701 054</a> · <a href="mailto:miroslavmiks@seznam.cz">miroslavmiks@seznam.cz</a></div>
+ </div>
+</footer>
+
+<div class="callbar">
+ <a class="btn btn-s" href="tel:+420608701054"><svg><use href="#ph"/></svg>Zavolat</a>
+ <a class="btn btn-o" href="#poptavka">Poptávka</a>
+</div>
+
+<script>
+document.querySelectorAll('[data-sluzba]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('sluzba').value=a.dataset.sluzba}));
+</script>
+<script>
+document.querySelectorAll('.upload input').forEach(i=>i.addEventListener('change',()=>{const t=i.closest('.upload').querySelector('.up-t');t.textContent=i.files.length?('Vybráno: '+i.files[0].name):'Přidat fotku (nepovinné)'}));
+</script>
+</body>
+</html>
